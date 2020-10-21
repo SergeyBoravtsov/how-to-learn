@@ -59,15 +59,25 @@
   z-index: 3;
 }
 
+.header__link{                       /*добавлен класс, определяющий стили ссылки*/
+  color: #2f80ed;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+}
+
 .header__main-illustration {
   position: absolute;
   width: 765px;
-  height: 651px;
+  height: 608px;
+  object-fit: cover;
     /*Столкнулся с некоторой сплюснутостью главной иллюстрации в шапке проекта.
     Размеры оригинала картинки в папке images 1426х1214.
     Размеры сжатой картинки по брифу 765х608.
     По моим подсчётам, чтобы сохранить пропорции и сохранить ширину 765,
-    высота картинки должна составить около 651 пикселя. */
+    высота картинки должна составить около 651 пикселя.
+
+    Исправил. */
   right: 0;
   bottom: 0;
   z-index: 2;
@@ -118,8 +128,8 @@
   margin: 0 0 30px;
 }
 
-.two-columns__paragraph_last{
-  margin: 0;
+.two-columns__paragraph:last-of-type{      /*добавлен псевдокласс*/
+  margin-bottom: 0;
 }
 
 .two-columns__span-accent {
@@ -164,7 +174,9 @@
 
 .table__cell{
   width:250px;
-  margin-top:60px;
+  margin:60px 0 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .table__heading{
@@ -186,7 +198,7 @@
 
 
 .feinman{
-  height:790px;
+  min-height:790px;    /*исправлено*/
   font-size:36px;
   background:#F2F2F2 url(../images/feynman.png) no-repeat bottom left;
   background-size:867px 637px;
@@ -266,6 +278,8 @@
 .table__cell_theme_dark{
   margin:80px 0 0;
   width:200px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .table__heading_theme_dark{
@@ -288,27 +302,29 @@
 
 .footer__columns {
   display: flex;
-  position: relative;
   width: 90%;
   min-height: 250px; /*  =350-60-40   */
   justify-content: space-between;
   margin: 0 auto;
 }
 
+.footer__column{
+  padding:0;
+}
+
 .footer__column_content_copyright {
   flex-basis: 711px;
+  display: flex;                       /*исправлено*/
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_place_footer{
   height: 35px;
-  margin-left: 0;
-  margin-top: 0;
+  margin: 0;
 }
 
 .footer__author {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   margin: 18px 0;
   padding: 0;
   line-height: 25px;
@@ -347,10 +363,11 @@
 }
 
 .footer__list-item {
-  list-style-type: none;  /*убрать маркеры в списках*/
+  list-style-type: none;
 }
 
 .footer__social-icon{
   width: 16px;
   height: 16px;
+  margin: 0 10px 0 0;
 }
