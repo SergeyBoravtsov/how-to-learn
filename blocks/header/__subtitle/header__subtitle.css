@@ -1,4 +1,5 @@
 .header__subtitle {
+  margin: 0;/**добавлено обнуление внешних отступов**/
   position: absolute;
   width: 388px;
   left: 64px;

@@ -1,4 +1,4 @@
 .khan__book-container {
   margin-top: 68px;
-  display: flex; /**при этом становится возможным разместить текст ссылки в верхней части book-container**/
+  display: flex;/**при этом становится возможным разместить текст ссылки в верхней части book-container**/
 }
